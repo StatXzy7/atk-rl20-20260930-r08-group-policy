@@ -1,0 +1,249 @@
+{
+  "configuration": {
+    "beta": 0.04,
+    "clip_epsilon": 0.2,
+    "eos_id": 4,
+    "group_sizes": [
+      2,
+      3
+    ],
+    "hidden_size": 4,
+    "max_new_tokens": 6,
+    "optimizer": "SGD(lr=0.2)",
+    "pad_id": 0,
+    "vocab_size": 5
+  },
+  "sampled_batch": {
+    "advantages": [
+      1.0,
+      -1.0,
+      -1.3363062143325806,
+      1.069045066833496,
+      0.2672612965106964
+    ],
+    "group_ids": [
+      0,
+      0,
+      1,
+      1,
+      1
+    ],
+    "input_ids": [
+      [
+        1,
+        2,
+        1,
+        4,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        2,
+        3,
+        3,
+        4,
+        0,
+        0,
+        0
+      ],
+      [
+        2,
+        3,
+        3,
+        2,
+        4,
+        0,
+        0,
+        0
+      ],
+      [
+        2,
+        3,
+        1,
+        1,
+        1,
+        2,
+        4,
+        0
+      ],
+      [
+        2,
+        3,
+        2,
+        3,
+        3,
+        3,
+        1,
+        3
+      ]
+    ],
+    "legal_vocab_mask": [
+      0,
+      1,
+      1,
+      1,
+      1
+    ],
+    "response_lengths": [
+      2,
+      3,
+      3,
+      5,
+      6
+    ],
+    "response_mask": [
+      [
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    ],
+    "rewards": [
+      0.75,
+      -0.75,
+      -0.75,
+      0.0,
+      -0.25
+    ]
+  },
+  "updates": {
+    "sequence_mean": {
+      "branches": {
+        "active_response_tokens": 19,
+        "lower_ratio_negative_advantage": 1,
+        "upper_ratio_positive_advantage": 6
+      },
+      "gradient_check": {
+        "embedding.weight": {
+          "l2_norm": 0.10791727900505066,
+          "max_abs": 0.0659765899181366
+        },
+        "hidden_layer.weight": {
+          "l2_norm": 0.10699764639139175,
+          "max_abs": 0.05135034769773483
+        },
+        "input_layer.bias": {
+          "l2_norm": 0.05588246509432793,
+          "max_abs": 0.03708473592996597
+        },
+        "input_layer.weight": {
+          "l2_norm": 0.03393672779202461,
+          "max_abs": 0.018991846591234207
+        },
+        "output_layer.bias": {
+          "l2_norm": 0.14228038489818573,
+          "max_abs": 0.09660431742668152
+        },
+        "output_layer.weight": {
+          "l2_norm": 0.23845742642879486,
+          "max_abs": 0.10086196660995483
+        }
+      },
+      "kl_penalty": 0.014322856441140175,
+      "loss": 0.5123844742774963,
+      "parameter_norm_delta": {
+        "embedding.weight": 0.00014448165893554688,
+        "hidden_layer.weight": -0.004430532455444336,
+        "input_layer.bias": 0.0026504993438720703,
+        "input_layer.weight": 0.00013184547424316406,
+        "output_layer.bias": -0.008867502212524414,
+        "output_layer.weight": -0.012024164199829102
+      },
+      "policy_objective": -0.4980615973472595,
+      "regularized_objective": -0.5123844742774963
+    },
+    "token_mean": {
+      "branches": {
+        "active_response_tokens": 19,
+        "lower_ratio_negative_advantage": 1,
+        "upper_ratio_positive_advantage": 6
+      },
+      "gradient_check": {
+        "embedding.weight": {
+          "l2_norm": 0.10997811704874039,
+          "max_abs": 0.07976779341697693
+        },
+        "hidden_layer.weight": {
+          "l2_norm": 0.08794023841619492,
+          "max_abs": 0.040405720472335815
+        },
+        "input_layer.bias": {
+          "l2_norm": 0.0535459965467453,
+          "max_abs": 0.04106365889310837
+        },
+        "input_layer.weight": {
+          "l2_norm": 0.033871281892061234,
+          "max_abs": 0.022337155416607857
+        },
+        "output_layer.bias": {
+          "l2_norm": 0.13272351026535034,
+          "max_abs": 0.08798149973154068
+        },
+        "output_layer.weight": {
+          "l2_norm": 0.21501758694648743,
+          "max_abs": 0.09066300094127655
+        }
+      },
+      "kl_penalty": 0.014383248053491116,
+      "loss": 0.3562459349632263,
+      "parameter_norm_delta": {
+        "embedding.weight": 7.581710815429688e-05,
+        "hidden_layer.weight": -0.003558635711669922,
+        "input_layer.bias": 0.0020018815994262695,
+        "input_layer.weight": 3.361701965332031e-05,
+        "output_layer.bias": -0.008289217948913574,
+        "output_layer.weight": -0.010684013366699219
+      },
+      "policy_objective": -0.34186267852783203,
+      "regularized_objective": -0.3562459349632263
+    }
+  }
+}
